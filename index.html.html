@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keretbe foglalom</title>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    background: #ffd19e;
+  }
+
+  .text {
+    position: fixed;
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+    color: black;
+    white-space: nowrap;
+  }
+
+  /* Felső vonal */
+  .top {
+    top: 0;
+    left: 0;
+    animation: moveRight 13s linear infinite;
+	
+  }
+
+  /* Jobb vonal (függőleges) */
+  .right {
+    top: 0;
+    right: 0;
+    writing-mode: vertical-rl;
+    animation: moveDown 13s linear infinite;
+    
+  }
+
+  /* Alsó vonal */
+  .bottom {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+    animation: moveLeft 13s linear infinite;
+    
+  }
+
+  /* Bal vonal (függőleges) */
+  .left {
+    bottom: 0;
+    left: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    animation: moveUp 13s linear infinite;
+    
+  
+ 
+  }
+
+  @keyframes moveRight {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  @keyframes moveDown {
+    0% { top: -100%; }
+    100% { top: 100%; }
+  }
+
+  @keyframes moveLeft {
+    0% { right: -100%; }
+    100% { right: 100%; }
+  }
+
+  @keyframes moveUp {
+    0% { bottom: -100%; }
+    100% { bottom: 100%; }
+  }
+ 
+ 
+  a {
+  position: absolute;
+  left: 800px;
+  top: 400px;
+}
+ 
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  font-weight: bold;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Tahoma, sans-serif;
+}
+
+a:hover, a:active {
+  background-color: red;
+</style>
+</head>
+<body>
+  <div class="text top">keretbe foglalom keretbe foglalom keretbe foglalom keretbe foglalom keretbe foglalom keretbe foglaom</div>
+  <div class="text right">keretbe foglalom keretbe foglalom keretbe foglalom keretbe foglalom keretbe foglalom keretbe</div>
+  <div class="text bottom">foglalom keretbe foglalom keretbe foglalom keretbe foglalom keretbe foglalom keretbe foglalom</div>
+  <div class="text left">keretbe foglalom keretbe foglalom keretbe foglalom keretbe foglalom keretbe foglalom keretbe</div>
+
+<a href="kerettelen.html" target="kerettelen">kerettelen</a>
+
+  
+</body>
+</html>
